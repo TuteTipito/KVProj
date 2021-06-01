@@ -25,9 +25,28 @@ class KVViewController: UIViewController {
         refreshControl.tintColor = UIColor.blue
         self.collectionView.refreshControl = refreshControl
         
+        let searchButton : UIBarButtonItem = UIBarButtonItem(title: "Search", style: UIBarButtonItem.Style.plain, target: self, action: #selector(KVViewController.searchGnomes))
+        let sortButton : UIBarButtonItem = UIBarButtonItem(title: "Sort", style: UIBarButtonItem.Style.plain, target: self, action: #selector(KVViewController.sortGnomes))
+        let filterButton : UIBarButtonItem = UIBarButtonItem(title: "Filter", style: UIBarButtonItem.Style.plain, target: self, action: #selector(KVViewController.filterGnomes))
+
+        self.navigationItem.rightBarButtonItems = [searchButton, sortButton, filterButton]
+        
     }
     
+    @objc func searchGnomes() {
+        let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        showAlert(title: "Proximamente...", message: "gracias por tu interés <3", actions: [okAction])
+    }
+    
+    @objc func filterGnomes() {
+        let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        showAlert(title: "Proximamente...", message: "gracias por tu interés <3", actions: [okAction])
+    }
 
+    @objc func sortGnomes() {
+        let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        showAlert(title: "Proximamente...", message: "gracias por tu interés <3", actions: [okAction])
+    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -78,6 +97,7 @@ extension KVViewController: UICollectionViewDataSource {
 
 extension KVViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
         let gnome = gnomes[indexPath.row]
         self.performSegue(withIdentifier: "GnomeDetail", sender: gnome)
     }
@@ -97,8 +117,9 @@ extension KVViewController {
             self?.collectionView.reloadData()
         }
         
-        let failure : APIFailureHandler = { error in
-            print("error : \(error)")
+        let failure : APIFailureHandler = { [weak self] error in
+            let okAction : UIAlertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            self?.showAlert(title: "Ups, algo salio mal (?)", message: "malio sal : \(error)", actions: [okAction])
         }
         
         KVNetworking.sharedInstance.getGnomes(success, failureHandler: failure)

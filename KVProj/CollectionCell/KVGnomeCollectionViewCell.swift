@@ -36,8 +36,28 @@ class KVGnomeCollectionViewCell: UICollectionViewCell {
         layer.shadowRadius = 16.0
         layer.shadowOpacity = 0.5
         layer.masksToBounds = false
-
     }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            if self.isHighlighted {
+                backgroundColor = UIColor.systemBlue
+            } else {
+                backgroundColor = UIColor.yellow
+            }
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                backgroundColor = UIColor.systemBlue
+            } else {
+                backgroundColor = UIColor.yellow
+            }
+        }
+    }
+    
     
     public func setup(with gnome: KVGnome) {
         gnomeImage.download(from: gnome.thumbnail)
