@@ -32,7 +32,9 @@ class KVViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GnomeDetail" {
-
+            if let gnomeDetailController = segue.destination as? KVDetailViewController {
+                gnomeDetailController.gnome = sender as? KVGnome
+            }
         }
     }
 
@@ -74,8 +76,8 @@ extension KVViewController: UICollectionViewDataSource {
 
 extension KVViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let book = gnomes[indexPath.row]
-        self.performSegue(withIdentifier: "GnomeDetail", sender: book)
+        let gnome = gnomes[indexPath.row]
+        self.performSegue(withIdentifier: "GnomeDetail", sender: gnome)
     }
 }
 

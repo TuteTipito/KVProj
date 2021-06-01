@@ -31,6 +31,7 @@ class KVGnomeCollectionViewCell: UICollectionViewCell {
     }
     
     public func setup(with gnome: KVGnome) {
+        gnomeImage.download(from: gnome.thumbnail)
         gnomeName.text = gnome.name
     }
 

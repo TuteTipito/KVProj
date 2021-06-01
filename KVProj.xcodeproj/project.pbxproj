@@ -18,6 +18,8 @@
 		003D273B2666C6C400C0B0D6 /* KVGnomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D27392666C6C400C0B0D6 /* KVGnomeCollectionViewCell.swift */; };
 		003D273C2666C6C400C0B0D6 /* KVGnomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 003D273A2666C6C400C0B0D6 /* KVGnomeCollectionViewCell.xib */; };
 		003D273F2666C88000C0B0D6 /* KVCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D273E2666C88000C0B0D6 /* KVCollectionViewFlowLayout.swift */; };
+		003D27422666CD5F00C0B0D6 /* KVDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D27412666CD5F00C0B0D6 /* KVDetailViewController.swift */; };
+		003D27452666CE8500C0B0D6 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D27442666CE8500C0B0D6 /* UIImageView+Download.swift */; };
 		B0D5BC0D1D39232E82DF159A /* Pods_KVProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BE7C8819373D0640682D5F /* Pods_KVProj.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		003D27392666C6C400C0B0D6 /* KVGnomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVGnomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		003D273A2666C6C400C0B0D6 /* KVGnomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KVGnomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		003D273E2666C88000C0B0D6 /* KVCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		003D27412666CD5F00C0B0D6 /* KVDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVDetailViewController.swift; sourceTree = "<group>"; };
+		003D27442666CE8500C0B0D6 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
 		06203FA617B00282C5EBE6DE /* Pods-KVProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVProj.debug.xcconfig"; path = "Target Support Files/Pods-KVProj/Pods-KVProj.debug.xcconfig"; sourceTree = "<group>"; };
 		99BE7C8819373D0640682D5F /* Pods_KVProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC5516857B28F7BCD81A966 /* Pods-KVProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVProj.release.xcconfig"; path = "Target Support Files/Pods-KVProj/Pods-KVProj.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,9 +80,11 @@
 				003D271C2666B8B200C0B0D6 /* AppDelegate.swift */,
 				003D271E2666B8B200C0B0D6 /* SceneDelegate.swift */,
 				003D27362666BD7000C0B0D6 /* KVViewController.swift */,
+				003D27432666CE6A00C0B0D6 /* Extensions */,
 				003D27302666BB2200C0B0D6 /* Networking */,
 				003D27332666BB8D00C0B0D6 /* Model */,
 				003D27382666C69600C0B0D6 /* CollectionCell */,
+				003D27402666CD4900C0B0D6 /* DetailView */,
 				003D27222666B8B200C0B0D6 /* Main.storyboard */,
 				003D27252666B8B400C0B0D6 /* Assets.xcassets */,
 				003D27272666B8B400C0B0D6 /* LaunchScreen.storyboard */,
@@ -111,6 +117,22 @@
 				003D273A2666C6C400C0B0D6 /* KVGnomeCollectionViewCell.xib */,
 			);
 			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		003D27402666CD4900C0B0D6 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				003D27412666CD5F00C0B0D6 /* KVDetailViewController.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		003D27432666CE6A00C0B0D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				003D27442666CE8500C0B0D6 /* UIImageView+Download.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8F857CFD8550A6350DD72C16 /* Pods */ = {
@@ -247,6 +269,8 @@
 			files = (
 				003D271D2666B8B200C0B0D6 /* AppDelegate.swift in Sources */,
 				003D27322666BB4100C0B0D6 /* KVNetworking.swift in Sources */,
+				003D27422666CD5F00C0B0D6 /* KVDetailViewController.swift in Sources */,
+				003D27452666CE8500C0B0D6 /* UIImageView+Download.swift in Sources */,
 				003D273B2666C6C400C0B0D6 /* KVGnomeCollectionViewCell.swift in Sources */,
 				003D27352666BBAB00C0B0D6 /* KVGnome.swift in Sources */,
 				003D271F2666B8B200C0B0D6 /* SceneDelegate.swift in Sources */,
