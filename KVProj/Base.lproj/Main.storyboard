@@ -37,7 +37,9 @@
                             <constraint firstItem="AQd-GK-j5G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yxg-cZ-EQN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="t7T-92-Oya"/>
+                    <navigationItem key="navigationItem" id="t7T-92-Oya">
+                        <barButtonItem key="backBarButtonItem" title=" " id="c9D-lR-128"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="AQd-GK-j5G" id="g6w-jj-TVk"/>
                         <segue destination="8NP-fz-SKa" kind="show" identifier="GnomeDetail" id="Iez-61-EXc"/>

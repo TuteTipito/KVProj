@@ -9,10 +9,7 @@ import UIKit
 
 enum KVDetailTableSections: Int, CaseIterable {
     case image
-    case age
-    case height
-    case weight
-    case hairColor
+    case age, height, weight, hairColor //TO-DO Make this one section (?
     case professions
     case friends
 }
@@ -23,7 +20,6 @@ class KVDetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +28,6 @@ class KVDetailViewController: UIViewController {
         if let gnome = self.gnome {
             self.navigationItem.title = gnome.name
         }
-
     }
 }
 
@@ -45,7 +40,7 @@ extension KVDetailViewController {
         tableView.register(UINib(nibName: "KVGnomeImageTableViewCell", bundle: nil), forCellReuseIdentifier: "KVGnomeImageTableViewCell")
         tableView.register(UINib(nibName: "KVGnomeTitleTableViewCell", bundle: nil), forCellReuseIdentifier: "KVGnomeTitleTableViewCell")
         tableView.register(UINib(nibName: "KVGnomeNameTableViewCell", bundle: nil), forCellReuseIdentifier: "KVGnomeNameTableViewCell")
-        
+        tableView.register(UINib(nibName: "KVGnomeValueTableViewCell", bundle: nil), forCellReuseIdentifier: "KVGnomeValueTableViewCell")
     }
 }
 
@@ -89,13 +84,25 @@ extension KVDetailViewController: UITableViewDataSource {
                 imageCell.setup(with: gnome)
                 return imageCell
             case .age:
-                break
+                let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
+                valueCell.keyLabel.text = "Age:"
+                valueCell.valueLabel.text = "\(gnome.age)"
+                return valueCell
             case .height:
-                break
+                let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
+                valueCell.keyLabel.text = "Height:"
+                valueCell.valueLabel.text = "\(gnome.height)"
+                return valueCell
             case .weight:
-                break
+                let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
+                valueCell.keyLabel.text = "Weight:"
+                valueCell.valueLabel.text = "\(gnome.weight)"
+                return valueCell
             case .hairColor:
-                break
+                let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
+                valueCell.keyLabel.text = "Hair Color:"
+                valueCell.valueLabel.text = gnome.hair_color
+                return valueCell
             case .professions:
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
                 let profession = gnome.professions[indexPath.row]
@@ -105,7 +112,7 @@ extension KVDetailViewController: UITableViewDataSource {
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
                 let friend = gnome.friends[indexPath.row]
                 nameCell.gnomeName.text = friend
-                nameCell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+//                nameCell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
                 return nameCell
             case .none:
                 break

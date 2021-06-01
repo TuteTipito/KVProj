@@ -25,6 +25,18 @@ class KVGnomeCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = UIColor.yellow
+        
+        layer.cornerRadius = 16.0
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.blue.cgColor
+        layer.masksToBounds = true
+        
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 4.0)
+        layer.shadowRadius = 16.0
+        layer.shadowOpacity = 0.5
+        layer.masksToBounds = false
+
     }
     
     public func setup(with gnome: KVGnome) {

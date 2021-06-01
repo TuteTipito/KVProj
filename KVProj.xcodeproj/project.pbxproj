@@ -26,6 +26,8 @@
 		003D274E2666D5C100C0B0D6 /* KVGnomeTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 003D274C2666D5C100C0B0D6 /* KVGnomeTitleTableViewCell.xib */; };
 		003D27512666D78F00C0B0D6 /* KVGnomeNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D274F2666D78F00C0B0D6 /* KVGnomeNameTableViewCell.swift */; };
 		003D27522666D78F00C0B0D6 /* KVGnomeNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 003D27502666D78F00C0B0D6 /* KVGnomeNameTableViewCell.xib */; };
+		003D27552666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D27532666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.swift */; };
+		003D27562666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 003D27542666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.xib */; };
 		B0D5BC0D1D39232E82DF159A /* Pods_KVProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BE7C8819373D0640682D5F /* Pods_KVProj.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		003D274C2666D5C100C0B0D6 /* KVGnomeTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KVGnomeTitleTableViewCell.xib; sourceTree = "<group>"; };
 		003D274F2666D78F00C0B0D6 /* KVGnomeNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVGnomeNameTableViewCell.swift; sourceTree = "<group>"; };
 		003D27502666D78F00C0B0D6 /* KVGnomeNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KVGnomeNameTableViewCell.xib; sourceTree = "<group>"; };
+		003D27532666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVGnomeValueTableViewCell.swift; sourceTree = "<group>"; };
+		003D27542666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KVGnomeValueTableViewCell.xib; sourceTree = "<group>"; };
 		06203FA617B00282C5EBE6DE /* Pods-KVProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVProj.debug.xcconfig"; path = "Target Support Files/Pods-KVProj/Pods-KVProj.debug.xcconfig"; sourceTree = "<group>"; };
 		99BE7C8819373D0640682D5F /* Pods_KVProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC5516857B28F7BCD81A966 /* Pods-KVProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVProj.release.xcconfig"; path = "Target Support Files/Pods-KVProj/Pods-KVProj.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				003D274C2666D5C100C0B0D6 /* KVGnomeTitleTableViewCell.xib */,
 				003D274F2666D78F00C0B0D6 /* KVGnomeNameTableViewCell.swift */,
 				003D27502666D78F00C0B0D6 /* KVGnomeNameTableViewCell.xib */,
+				003D27532666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.swift */,
+				003D27542666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				003D274A2666D37D00C0B0D6 /* KVGnomeImageTableViewCell.xib in Resources */,
 				003D27292666B8B400C0B0D6 /* LaunchScreen.storyboard in Resources */,
 				003D27262666B8B400C0B0D6 /* Assets.xcassets in Resources */,
+				003D27562666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.xib in Resources */,
 				003D274E2666D5C100C0B0D6 /* KVGnomeTitleTableViewCell.xib in Resources */,
 				003D27242666B8B200C0B0D6 /* Main.storyboard in Resources */,
 			);
@@ -305,6 +312,7 @@
 				003D27352666BBAB00C0B0D6 /* KVGnome.swift in Sources */,
 				003D274D2666D5C100C0B0D6 /* KVGnomeTitleTableViewCell.swift in Sources */,
 				003D27512666D78F00C0B0D6 /* KVGnomeNameTableViewCell.swift in Sources */,
+				003D27552666DA8A00C0B0D6 /* KVGnomeValueTableViewCell.swift in Sources */,
 				003D271F2666B8B200C0B0D6 /* SceneDelegate.swift in Sources */,
 				003D273F2666C88000C0B0D6 /* KVCollectionViewFlowLayout.swift in Sources */,
 				003D27372666BD7000C0B0D6 /* KVViewController.swift in Sources */,
