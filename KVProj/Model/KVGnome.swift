@@ -39,3 +39,61 @@ struct KVGnome: Codable {
     }
     
 }
+
+class KVGnomeViewModel: NSObject {
+
+    let gnome: KVGnome
+    
+    init(gnome: KVGnome) {
+        self.gnome = gnome
+    }
+    
+    var gnomeID: String {
+        if let id = gnome.id {
+            return "\(id)"
+        }
+        return ""
+    }
+
+    var gnomeName: String {
+        return gnome.name ?? ""
+    }
+    
+    var gnomeThumbnail: String {
+        return gnome.thumbnail ?? ""
+    }
+
+    var gnomeAge: String {
+        if let age = gnome.age {
+            return "\(age)"
+        }
+        return ""
+    }
+    
+    var gnomeWeight: String {
+        if let weight = gnome.weight {
+            return "\(weight)"
+        }
+        return ""
+    }
+    
+    var gnomeHeight: String {
+        if let height = gnome.height {
+            return "\(height)"
+        }
+        return ""
+    }
+    
+    var gnomeHairColor: String {
+        return gnome.hairColor ?? ""
+    }
+
+    var gnomeProfessions: [String] {
+        return gnome.professions ?? []
+    }
+    
+    var gnomeFriends: [String] {
+        return gnome.friends ?? []
+    }
+}
+

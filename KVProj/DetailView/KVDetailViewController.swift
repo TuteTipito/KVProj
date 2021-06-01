@@ -16,7 +16,7 @@ enum KVDetailTableSections: Int, CaseIterable {
 
 class KVDetailViewController: UIViewController {
 
-    var gnome: KVGnome?
+    var gnome: KVGnomeViewModel? // make it on init
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -24,9 +24,9 @@ class KVDetailViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
-
+        
         if let gnome = self.gnome {
-            self.navigationItem.title = gnome.name
+            self.navigationItem.title = gnome.gnomeName
         }
         
         let backItem : UIBarButtonItem = UIBarButtonItem(title: "Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(KVDetailViewController.dismissModal))
@@ -58,19 +58,19 @@ extension KVDetailViewController: UITableViewDataSource {
         if let gnome = self.gnome {
             switch KVDetailTableSections(rawValue: section) {
             case .image:
-                return gnome.thumbnail != nil ? 1 : 0
+                return 1
             case .age:
-                return gnome.age != nil ? 1 : 0
+                return 1
             case .height:
-                return gnome.height != nil ? 1 : 0
+                return 1
             case .weight:
-                return gnome.weight != nil ? 1 : 0
+                return 1
             case .hairColor:
-                return gnome.hairColor != nil ? 1 : 0
+                return 1
             case .professions:
-                return gnome.professions?.count ?? 0
+                return gnome.gnomeProfessions.count
             case .friends:
-                return gnome.friends?.count ?? 0
+                return gnome.gnomeFriends.count
             case .none:
                 return 0
             }
@@ -93,41 +93,33 @@ extension KVDetailViewController: UITableViewDataSource {
                 return imageCell
             case .age:
                 let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
-                if let age = gnome.age {
-                    valueCell.keyLabel.text = "Age:"
-                    valueCell.valueLabel.text = "\(age)"
-                }
+                valueCell.keyLabel.text = "Age:"
+                valueCell.valueLabel.text = "\(gnome.gnomeAge)"
                 return valueCell
             case .height:
                 let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
-                if let height = gnome.height {
-                    valueCell.keyLabel.text = "Height:"
-                    valueCell.valueLabel.text = "\(height)"
-                }
+                valueCell.keyLabel.text = "Height:"
+                valueCell.valueLabel.text = "\(gnome.gnomeHeight)"
                 return valueCell
             case .weight:
                 let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
-                if let weight = gnome.weight {
-                    valueCell.keyLabel.text = "Weight:"
-                    valueCell.valueLabel.text = "\(weight)"
-                }
+                valueCell.keyLabel.text = "Weight:"
+                valueCell.valueLabel.text = "\(gnome.gnomeWeight)"
                 return valueCell
             case .hairColor:
                 let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
-                if let hairColor = gnome.hairColor {
-                    valueCell.keyLabel.text = "Hair Color:"
-                    valueCell.valueLabel.text = hairColor                    
-                }
-                return valueCell
+                valueCell.keyLabel.text = "Hair Color:"
+                valueCell.valueLabel.text = gnome.gnomeHairColor
+            return valueCell
             case .professions:
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
-                if let profession = gnome.professions?[indexPath.row] {
+                if let profession = gnome.gnomeProfessions[indexPath.row] {
                     nameCell.gnomeName.text = profession
                 }
                 return nameCell
             case .friends:
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
-                if let friend = gnome.friends?[indexPath.row] {
+                if let friend = gnome.gnomeFriends[indexPath.row] {
                     nameCell.gnomeName.text = friend
                 }
 //                nameCell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator

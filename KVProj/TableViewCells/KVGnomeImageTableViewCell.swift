@@ -20,7 +20,7 @@ class KVGnomeImageTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    public func setup(with gnome: KVGnome) {
-        gnomeImage.download(from: gnome.thumbnail ?? "")
+    public func setup(with gnome: KVGnomeViewModel) {
+        gnomeImage.download(from: gnome.gnomeThumbnail)
     }
 }

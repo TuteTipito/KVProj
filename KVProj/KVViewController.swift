@@ -10,7 +10,7 @@ import UIKit
 class KVViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    var gnomes: [KVGnome] = []
+    var gnomes: [KVGnomeViewModel] = []
 
     
     override func viewDidLoad() {
@@ -53,7 +53,7 @@ class KVViewController: UIViewController {
         if segue.identifier == "GnomeDetail" {
             if let navigationController = segue.destination as? UINavigationController {
                 if let gnomeDetailController = navigationController.viewControllers[0] as? KVDetailViewController {
-                    gnomeDetailController.gnome = sender as? KVGnome
+                    gnomeDetailController.gnome = sender as? KVGnomeViewModel
                 }
             }
         }
@@ -86,7 +86,7 @@ extension KVViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
                 
-        let gnome: KVGnome = gnomes[indexPath.row]
+        let gnome: KVGnomeViewModel = gnomes[indexPath.row]
 
         let cell : KVGnomeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "KVGnomeCollectionViewCell", for: indexPath) as! KVGnomeCollectionViewCell
         cell.setup(with: gnome)
@@ -112,8 +112,14 @@ extension KVViewController {
     
     private func loadGnomes() {
         
+        gnomes.removeAll()
+        
         let success : APICompletionHandler = { [weak self] data in
-            self?.gnomes = (data as! KVGnomes).brastlewark ?? []
+            if let brastlewark = (data as! KVGnomes).brastlewark {
+                for gnome in brastlewark {
+                    self?.gnomes.append(KVGnomeViewModel(gnome: gnome))
+                }
+            }
             self?.collectionView.reloadData()
         }
         
