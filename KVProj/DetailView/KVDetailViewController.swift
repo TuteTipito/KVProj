@@ -58,19 +58,19 @@ extension KVDetailViewController: UITableViewDataSource {
         if let gnome = self.gnome {
             switch KVDetailTableSections(rawValue: section) {
             case .image:
-                return 1
+                return gnome.thumbnail != nil ? 1 : 0
             case .age:
-                return 1
+                return gnome.age != nil ? 1 : 0
             case .height:
-                return 1
+                return gnome.height != nil ? 1 : 0
             case .weight:
-                return 1
+                return gnome.weight != nil ? 1 : 0
             case .hairColor:
-                return 1
+                return gnome.hair_color != nil ? 1 : 0
             case .professions:
-                return gnome.professions.count
+                return gnome.professions?.count ?? 0
             case .friends:
-                return gnome.friends.count
+                return gnome.friends?.count ?? 0
             case .none:
                 return 0
             }
@@ -113,13 +113,15 @@ extension KVDetailViewController: UITableViewDataSource {
                 return valueCell
             case .professions:
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
-                let profession = gnome.professions[indexPath.row]
-                nameCell.gnomeName.text = profession
+                if let profession = gnome.professions?[indexPath.row] {
+                    nameCell.gnomeName.text = profession
+                }
                 return nameCell
             case .friends:
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
-                let friend = gnome.friends[indexPath.row]
-                nameCell.gnomeName.text = friend
+                if let friend = gnome.friends?[indexPath.row] {
+                    nameCell.gnomeName.text = friend
+                }
 //                nameCell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
                 return nameCell
             case .none:

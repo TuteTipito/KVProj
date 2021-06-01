@@ -21,6 +21,6 @@ class KVGnomeImageTableViewCell: UITableViewCell {
     }
     
     public func setup(with gnome: KVGnome) {
-        gnomeImage.download(from: gnome.thumbnail)
+        gnomeImage.download(from: gnome.thumbnail ?? "")
     }
 }

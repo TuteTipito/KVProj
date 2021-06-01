@@ -8,17 +8,17 @@
 import UIKit
 
 struct KVGnomes: Codable {
-    let Brastlewark: [KVGnome]
+    let Brastlewark: [KVGnome]?
 }
 
 struct KVGnome: Codable {
-    let id: Int
-    let name: String
-    let thumbnail: String
-    let age: Int
-    let weight: Double
-    let height: Double
-    let hair_color: String
-    let professions: [String]
-    let friends: [String]
+    let id: Int?
+    let name: String?
+    let thumbnail: String?
+    let age: Int?
+    let weight: Double?
+    let height: Double?
+    let hair_color: String?
+    let professions: [String]?
+    let friends: [String]?
 }

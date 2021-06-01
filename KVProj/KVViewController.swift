@@ -113,7 +113,7 @@ extension KVViewController {
     private func loadGnomes() {
         
         let success : APICompletionHandler = { [weak self] data in
-            self?.gnomes = (data as! KVGnomes).Brastlewark
+            self?.gnomes = (data as! KVGnomes).Brastlewark ?? []
             self?.collectionView.reloadData()
         }
         
