@@ -8,7 +8,11 @@
 import UIKit
 
 struct KVGnomes: Codable {
-    let Brastlewark: [KVGnome]?
+    let brastlewark: [KVGnome]?
+    
+    enum CodingKeys: String, CodingKey {
+        case brastlewark = "Brastlewark"
+    }
 }
 
 struct KVGnome: Codable {
@@ -18,7 +22,20 @@ struct KVGnome: Codable {
     let age: Int?
     let weight: Double?
     let height: Double?
-    let hair_color: String?
+    let hairColor: String?
     let professions: [String]?
     let friends: [String]?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case thumbnail
+        case age
+        case weight
+        case height
+        case hairColor = "hair_color"
+        case professions
+        case friends
+    }
+    
 }

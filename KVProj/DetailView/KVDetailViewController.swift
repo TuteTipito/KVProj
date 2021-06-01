@@ -66,7 +66,7 @@ extension KVDetailViewController: UITableViewDataSource {
             case .weight:
                 return gnome.weight != nil ? 1 : 0
             case .hairColor:
-                return gnome.hair_color != nil ? 1 : 0
+                return gnome.hairColor != nil ? 1 : 0
             case .professions:
                 return gnome.professions?.count ?? 0
             case .friends:
@@ -93,23 +93,31 @@ extension KVDetailViewController: UITableViewDataSource {
                 return imageCell
             case .age:
                 let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
-                valueCell.keyLabel.text = "Age:"
-                valueCell.valueLabel.text = "\(gnome.age)"
+                if let age = gnome.age {
+                    valueCell.keyLabel.text = "Age:"
+                    valueCell.valueLabel.text = "\(age)"
+                }
                 return valueCell
             case .height:
                 let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
-                valueCell.keyLabel.text = "Height:"
-                valueCell.valueLabel.text = "\(gnome.height)"
+                if let height = gnome.height {
+                    valueCell.keyLabel.text = "Height:"
+                    valueCell.valueLabel.text = "\(height)"
+                }
                 return valueCell
             case .weight:
                 let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
-                valueCell.keyLabel.text = "Weight:"
-                valueCell.valueLabel.text = "\(gnome.weight)"
+                if let weight = gnome.weight {
+                    valueCell.keyLabel.text = "Weight:"
+                    valueCell.valueLabel.text = "\(weight)"
+                }
                 return valueCell
             case .hairColor:
                 let valueCell : KVGnomeValueTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeValueTableViewCell", for: indexPath) as! KVGnomeValueTableViewCell
-                valueCell.keyLabel.text = "Hair Color:"
-                valueCell.valueLabel.text = gnome.hair_color
+                if let hairColor = gnome.hairColor {
+                    valueCell.keyLabel.text = "Hair Color:"
+                    valueCell.valueLabel.text = hairColor                    
+                }
                 return valueCell
             case .professions:
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
