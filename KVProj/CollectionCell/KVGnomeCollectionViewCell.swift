@@ -9,12 +9,9 @@ import UIKit
 
 class KVGnomeCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var gnomeImage: UIImageView! {
-        didSet {
-
-        }
-    }
-    @IBOutlet weak var gnomeName: UILabel! {
+    @IBOutlet private weak var gnomeImage: UIImageView!
+    
+    @IBOutlet private weak var gnomeName: UILabel! {
         didSet {
             gnomeName.font = UIFont.systemFont(ofSize: 14)
             gnomeName.textColor = UIColor.black

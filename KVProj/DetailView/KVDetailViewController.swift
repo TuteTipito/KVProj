@@ -7,18 +7,149 @@
 
 import UIKit
 
+enum KVDetailTableSections: Int, CaseIterable {
+    case image
+    case age
+    case height
+    case weight
+    case hairColor
+    case professions
+    case friends
+}
+
 class KVDetailViewController: UIViewController {
 
     var gnome: KVGnome?
 
-    @IBOutlet weak var gnomeImage: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTableView()
+
         if let gnome = self.gnome {
-            gnomeImage.download(from: gnome.thumbnail)
+            self.navigationItem.title = gnome.name
         }
+
+    }
+}
+
+// MARK: - Setup
+extension KVDetailViewController {
+    private func setupTableView() {
+        tableView.backgroundColor = UIColor.clear
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "KVGnomeImageTableViewCell", bundle: nil), forCellReuseIdentifier: "KVGnomeImageTableViewCell")
+        tableView.register(UINib(nibName: "KVGnomeTitleTableViewCell", bundle: nil), forCellReuseIdentifier: "KVGnomeTitleTableViewCell")
+        tableView.register(UINib(nibName: "KVGnomeNameTableViewCell", bundle: nil), forCellReuseIdentifier: "KVGnomeNameTableViewCell")
         
     }
 }
+
+// MARK: - TableView
+extension KVDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let gnome = self.gnome {
+            switch KVDetailTableSections(rawValue: section) {
+            case .image:
+                return 1
+            case .age:
+                return 1
+            case .height:
+                return 1
+            case .weight:
+                return 1
+            case .hairColor:
+                return 1
+            case .professions:
+                return gnome.professions.count
+            case .friends:
+                return gnome.friends.count
+            case .none:
+                return 0
+            }
+        }
+        return 0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return KVDetailTableSections.allCases.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        if let gnome = self.gnome {
+            switch KVDetailTableSections(rawValue: indexPath.section) {
+            case .image:
+                let imageCell : KVGnomeImageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeImageTableViewCell", for: indexPath) as! KVGnomeImageTableViewCell
+                imageCell.setup(with: gnome)
+                return imageCell
+            case .age:
+                break
+            case .height:
+                break
+            case .weight:
+                break
+            case .hairColor:
+                break
+            case .professions:
+                let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
+                let profession = gnome.professions[indexPath.row]
+                nameCell.gnomeName.text = profession
+                return nameCell
+            case .friends:
+                let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
+                let friend = gnome.friends[indexPath.row]
+                nameCell.gnomeName.text = friend
+                nameCell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+                return nameCell
+            case .none:
+                break
+            }
+        }
+        
+        return cell
+
+    }
+    
+}
+
+extension KVDetailViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == KVDetailTableSections.professions.rawValue || section == KVDetailTableSections.friends.rawValue {
+            return 60
+        }
+        return CGFloat.leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == KVDetailTableSections.professions.rawValue {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeTitleTableViewCell") as! KVGnomeTitleTableViewCell
+            cell.titleLabel.text = "PROFESSIONS"
+            return cell
+        }
+        
+        if section == KVDetailTableSections.friends.rawValue {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeTitleTableViewCell") as! KVGnomeTitleTableViewCell
+            cell.titleLabel.text = "FRIENDS"
+            return cell
+        }
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == KVDetailTableSections.friends.rawValue {
+            // TO-DO
+        }
+    }
+}
+
