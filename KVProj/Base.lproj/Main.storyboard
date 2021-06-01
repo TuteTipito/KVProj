@@ -42,7 +42,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="AQd-GK-j5G" id="g6w-jj-TVk"/>
-                        <segue destination="8NP-fz-SKa" kind="show" identifier="GnomeDetail" id="Iez-61-EXc"/>
+                        <segue destination="cI3-Gd-1a1" kind="presentation" identifier="GnomeDetail" id="Iez-61-EXc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,11 +54,11 @@
             <objects>
                 <viewController id="8NP-fz-SKa" customClass="KVDetailViewController" customModule="KVProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D2w-1y-9Ii">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RHY-LT-zl6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rH-0e-kMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1907" y="75"/>
+            <point key="canvasLocation" x="2815.9420289855075" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vrl-we-kuj">
@@ -97,6 +97,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VoE-Ro-IJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pcY-KK-qPd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cI3-Gd-1a1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SnE-UE-MA9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8NP-fz-SKa" kind="relationship" relationship="rootViewController" id="cmk-A1-8n7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdD-NG-bd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905.7971014492755" y="75"/>
         </scene>
     </scenes>
     <resources>

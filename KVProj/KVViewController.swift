@@ -32,8 +32,10 @@ class KVViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GnomeDetail" {
-            if let gnomeDetailController = segue.destination as? KVDetailViewController {
-                gnomeDetailController.gnome = sender as? KVGnome
+            if let navigationController = segue.destination as? UINavigationController {
+                if let gnomeDetailController = navigationController.viewControllers[0] as? KVDetailViewController {
+                    gnomeDetailController.gnome = sender as? KVGnome
+                }
             }
         }
     }

@@ -28,6 +28,14 @@ class KVDetailViewController: UIViewController {
         if let gnome = self.gnome {
             self.navigationItem.title = gnome.name
         }
+        
+        let backItem : UIBarButtonItem = UIBarButtonItem(title: "Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(KVDetailViewController.dismissModal))
+        self.navigationItem.leftBarButtonItem = backItem
+        
+    }
+
+    @objc func dismissModal() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
