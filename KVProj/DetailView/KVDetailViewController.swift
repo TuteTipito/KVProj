@@ -113,15 +113,11 @@ extension KVDetailViewController: UITableViewDataSource {
             return valueCell
             case .professions:
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
-                if let profession = gnome.gnomeProfessions[indexPath.row] {
-                    nameCell.gnomeName.text = profession
-                }
+                nameCell.gnomeName.text = gnome.gnomeProfessions[indexPath.row]
                 return nameCell
             case .friends:
                 let nameCell : KVGnomeNameTableViewCell = tableView.dequeueReusableCell(withIdentifier: "KVGnomeNameTableViewCell", for: indexPath) as! KVGnomeNameTableViewCell
-                if let friend = gnome.gnomeFriends[indexPath.row] {
-                    nameCell.gnomeName.text = friend
-                }
+                nameCell.gnomeName.text = gnome.gnomeFriends[indexPath.row]
 //                nameCell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
                 return nameCell
             case .none:
