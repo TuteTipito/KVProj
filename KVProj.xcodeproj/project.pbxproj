@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		003D271D2666B8B200C0B0D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D271C2666B8B200C0B0D6 /* AppDelegate.swift */; };
+		003D271F2666B8B200C0B0D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D271E2666B8B200C0B0D6 /* SceneDelegate.swift */; };
+		003D27242666B8B200C0B0D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003D27222666B8B200C0B0D6 /* Main.storyboard */; };
+		003D27262666B8B400C0B0D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003D27252666B8B400C0B0D6 /* Assets.xcassets */; };
+		003D27292666B8B400C0B0D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003D27272666B8B400C0B0D6 /* LaunchScreen.storyboard */; };
+		003D27322666BB4100C0B0D6 /* KVNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D27312666BB4100C0B0D6 /* KVNetworking.swift */; };
+		003D27352666BBAB00C0B0D6 /* KVGnome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D27342666BBAB00C0B0D6 /* KVGnome.swift */; };
+		003D27372666BD7000C0B0D6 /* KVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D27362666BD7000C0B0D6 /* KVViewController.swift */; };
+		B0D5BC0D1D39232E82DF159A /* Pods_KVProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99BE7C8819373D0640682D5F /* Pods_KVProj.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		003D27192666B8B200C0B0D6 /* KVProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		003D271C2666B8B200C0B0D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		003D271E2666B8B200C0B0D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		003D27232666B8B200C0B0D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		003D27252666B8B400C0B0D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		003D27282666B8B400C0B0D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		003D272A2666B8B400C0B0D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		003D27312666BB4100C0B0D6 /* KVNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVNetworking.swift; sourceTree = "<group>"; };
+		003D27342666BBAB00C0B0D6 /* KVGnome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVGnome.swift; sourceTree = "<group>"; };
+		003D27362666BD7000C0B0D6 /* KVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVViewController.swift; sourceTree = "<group>"; };
+		06203FA617B00282C5EBE6DE /* Pods-KVProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVProj.debug.xcconfig"; path = "Target Support Files/Pods-KVProj/Pods-KVProj.debug.xcconfig"; sourceTree = "<group>"; };
+		99BE7C8819373D0640682D5F /* Pods_KVProj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KVProj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC5516857B28F7BCD81A966 /* Pods-KVProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KVProj.release.xcconfig"; path = "Target Support Files/Pods-KVProj/Pods-KVProj.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		003D27162666B8B200C0B0D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0D5BC0D1D39232E82DF159A /* Pods_KVProj.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		003D27102666B8B200C0B0D6 = {
+			isa = PBXGroup;
+			children = (
+				003D271B2666B8B200C0B0D6 /* KVProj */,
+				003D271A2666B8B200C0B0D6 /* Products */,
+				8F857CFD8550A6350DD72C16 /* Pods */,
+				B32348191840FA8B4DD04A4B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		003D271A2666B8B200C0B0D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				003D27192666B8B200C0B0D6 /* KVProj.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		003D271B2666B8B200C0B0D6 /* KVProj */ = {
+			isa = PBXGroup;
+			children = (
+				003D271C2666B8B200C0B0D6 /* AppDelegate.swift */,
+				003D271E2666B8B200C0B0D6 /* SceneDelegate.swift */,
+				003D27362666BD7000C0B0D6 /* KVViewController.swift */,
+				003D27302666BB2200C0B0D6 /* Networking */,
+				003D27332666BB8D00C0B0D6 /* Model */,
+				003D27222666B8B200C0B0D6 /* Main.storyboard */,
+				003D27252666B8B400C0B0D6 /* Assets.xcassets */,
+				003D27272666B8B400C0B0D6 /* LaunchScreen.storyboard */,
+				003D272A2666B8B400C0B0D6 /* Info.plist */,
+			);
+			path = KVProj;
+			sourceTree = "<group>";
+		};
+		003D27302666BB2200C0B0D6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				003D27312666BB4100C0B0D6 /* KVNetworking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		003D27332666BB8D00C0B0D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				003D27342666BBAB00C0B0D6 /* KVGnome.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F857CFD8550A6350DD72C16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06203FA617B00282C5EBE6DE /* Pods-KVProj.debug.xcconfig */,
+				9AC5516857B28F7BCD81A966 /* Pods-KVProj.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B32348191840FA8B4DD04A4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99BE7C8819373D0640682D5F /* Pods_KVProj.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		003D27182666B8B200C0B0D6 /* KVProj */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 003D272D2666B8B400C0B0D6 /* Build configuration list for PBXNativeTarget "KVProj" */;
+			buildPhases = (
+				00DC0B8155688744D6369EF6 /* [CP] Check Pods Manifest.lock */,
+				003D27152666B8B200C0B0D6 /* Sources */,
+				003D27162666B8B200C0B0D6 /* Frameworks */,
+				003D27172666B8B200C0B0D6 /* Resources */,
+				197DD7A9492686F432982310 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KVProj;
+			productName = KVProj;
+			productReference = 003D27192666B8B200C0B0D6 /* KVProj.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		003D27112666B8B200C0B0D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					003D27182666B8B200C0B0D6 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 003D27142666B8B200C0B0D6 /* Build configuration list for PBXProject "KVProj" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 003D27102666B8B200C0B0D6;
+			productRefGroup = 003D271A2666B8B200C0B0D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				003D27182666B8B200C0B0D6 /* KVProj */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		003D27172666B8B200C0B0D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				003D27292666B8B400C0B0D6 /* LaunchScreen.storyboard in Resources */,
+				003D27262666B8B400C0B0D6 /* Assets.xcassets in Resources */,
+				003D27242666B8B200C0B0D6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DC0B8155688744D6369EF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KVProj-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		197DD7A9492686F432982310 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KVProj/Pods-KVProj-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KVProj/Pods-KVProj-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KVProj/Pods-KVProj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		003D27152666B8B200C0B0D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				003D271D2666B8B200C0B0D6 /* AppDelegate.swift in Sources */,
+				003D27322666BB4100C0B0D6 /* KVNetworking.swift in Sources */,
+				003D27352666BBAB00C0B0D6 /* KVGnome.swift in Sources */,
+				003D271F2666B8B200C0B0D6 /* SceneDelegate.swift in Sources */,
+				003D27372666BD7000C0B0D6 /* KVViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		003D27222666B8B200C0B0D6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				003D27232666B8B200C0B0D6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		003D27272666B8B400C0B0D6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				003D27282666B8B400C0B0D6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		003D272B2666B8B400C0B0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		003D272C2666B8B400C0B0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		003D272E2666B8B400C0B0D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06203FA617B00282C5EBE6DE /* Pods-KVProj.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PK8BH6D6G;
+				INFOPLIST_FILE = KVProj/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = matiasspinelli.KVProj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		003D272F2666B8B400C0B0D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC5516857B28F7BCD81A966 /* Pods-KVProj.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4PK8BH6D6G;
+				INFOPLIST_FILE = KVProj/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = matiasspinelli.KVProj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		003D27142666B8B200C0B0D6 /* Build configuration list for PBXProject "KVProj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				003D272B2666B8B400C0B0D6 /* Debug */,
+				003D272C2666B8B400C0B0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		003D272D2666B8B400C0B0D6 /* Build configuration list for PBXNativeTarget "KVProj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				003D272E2666B8B400C0B0D6 /* Debug */,
+				003D272F2666B8B400C0B0D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 003D27112666B8B200C0B0D6 /* Project object */;
+}
